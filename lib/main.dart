@@ -60,6 +60,7 @@ class Home extends ConsumerWidget {
             // Consumer is a widget that allows you reading providers.
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.lightGreen,
                 shape: const CircleBorder(
                   side: BorderSide(
                     color: Colors.black,
@@ -71,10 +72,12 @@ class Home extends ConsumerWidget {
               child: SizedBox(
                 height: MediaQuery.of(context).size.width * 0.8,
                 width: MediaQuery.of(context).size.width * 0.8,
-                child: Center(
-                  child: Text(
-                    '新潟・長岡\n知るボタン',
-                    style: Theme.of(context).textTheme.headlineMedium,
+                child: const Center(
+                  child: Image(
+                    height: 300,
+                    width: 300,
+                    image: NetworkImage(
+                        'https://1.bp.blogspot.com/-cjHol-V3tEA/UV1JKWwVOHI/AAAAAAAAPUc/kpkipj47LI4/s1600/kome_tawara.png'),
                   ),
                 ),
               ),
