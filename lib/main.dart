@@ -43,14 +43,14 @@ class Home extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: const Text('新潟・長岡 知るボタン')),
+      appBar: AppBar(title: const Text('新潟 知るボタン')),
       body: Column(
         children: [
           const Padding(
-            padding: EdgeInsets.only(top: 75, bottom: 75),
+            padding: EdgeInsets.only(top: 30, bottom: 75),
             child: Center(
                 child: Text(
-              "新潟・長岡のことをもっと知れるボタンです!\nたくさん押してみましょう!",
+              "新潟のことをもっと知れるボタンです!\nたくさん押してみましょう!",
               style: TextStyle(
                 fontSize: 18,
               ),
@@ -90,10 +90,11 @@ class Home extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.only(top: 50),
             child: Text(
-                'あなたの知った回数: ${ref.watch(counterProvider.state).state.toString()}'),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 50),
+              'あなたの知った回数: ${ref.watch(counterProvider.state).state.toString()}',
+              style: const TextStyle(
+                fontSize: 16,
+              ),
+            ),
           )
         ],
       ),
