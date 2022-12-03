@@ -6,7 +6,7 @@ part 'knowledge_button.g.dart';
 
 @unfreezed
 class KnowledgeButton with _$KnowledgeButton {
-  const factory KnowledgeButton({
+  factory KnowledgeButton({
     required final String title,
     required final List<String> urls,
     required int counter,

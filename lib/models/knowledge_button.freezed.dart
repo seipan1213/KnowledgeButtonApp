@@ -122,7 +122,7 @@ class __$$_KnowledgeButtonCopyWithImpl<$Res>
 class _$_KnowledgeButton
     with DiagnosticableTreeMixin
     implements _KnowledgeButton {
-  const _$_KnowledgeButton(
+  _$_KnowledgeButton(
       {required this.title, required this.urls, required this.counter});
 
   factory _$_KnowledgeButton.fromJson(Map<String, dynamic> json) =>
@@ -165,7 +165,7 @@ class _$_KnowledgeButton
 }
 
 abstract class _KnowledgeButton implements KnowledgeButton {
-  const factory _KnowledgeButton(
+  factory _KnowledgeButton(
       {required final String title,
       required final List<String> urls,
       required int counter}) = _$_KnowledgeButton;
