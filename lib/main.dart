@@ -2,29 +2,27 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:kome_app/views/pages/home/home_page.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-// A Counter example implemented with riverpod
 
 void main() {
   runApp(
-    // Adding ProviderScope enables Riverpod for the entire project
     const ProviderScope(child: MyApp()),
   );
 }
-
-final counterProvider = StateProvider((ref) => 0);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Home());
+    return const MaterialApp(home: HomePage());
   }
 }
 
-class Home extends ConsumerWidget {
+final counterProvider = StateProvider((ref) => 0);
+
+class KnowButton extends ConsumerWidget {
   List<String> urls = [
     "https://niigata-kankou.or.jp/spot/10668",
     "https://niigata-kankou.or.jp/spot/6950",
