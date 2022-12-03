@@ -6,7 +6,7 @@ class KnowledgeDataRepository {
   // アクセストークンを.envファイルから読み込み
   //final String authorization = ' Bearer ${dotenv.env['XXXX']}';
 
-  Future<KnowledgeData> fetch() async {
+  Future<dynamic> fetch() async {
     await Future.delayed(const Duration(milliseconds: 100));
     return const KnowledgeData(title: "hoge", urls: ["urls", "urls"]);
   }
