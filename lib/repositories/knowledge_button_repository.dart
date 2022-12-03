@@ -34,8 +34,6 @@ class KnowledgeButtonRepository {
         "counter": 0,
       }
     ];
-    return value
-        .map((e) => KnowledgeButton.fromJson(e as Map<String, dynamic>))
-        .toList();
+    return value.map((e) => KnowledgeButton.fromJson(e)).toList();
   }
 }

@@ -23,6 +23,7 @@ mixin _$KnowledgeButton {
   String get title => throw _privateConstructorUsedError;
   List<String> get urls => throw _privateConstructorUsedError;
   int get counter => throw _privateConstructorUsedError;
+  set counter(int value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -105,7 +106,7 @@ class __$$_KnowledgeButtonCopyWithImpl<$Res>
           : title // ignore: cast_nullable_to_non_nullable
               as String,
       urls: null == urls
-          ? _value._urls
+          ? _value.urls
           : urls // ignore: cast_nullable_to_non_nullable
               as List<String>,
       counter: null == counter
@@ -122,26 +123,17 @@ class _$_KnowledgeButton
     with DiagnosticableTreeMixin
     implements _KnowledgeButton {
   const _$_KnowledgeButton(
-      {required this.title,
-      required final List<String> urls,
-      required this.counter})
-      : _urls = urls;
+      {required this.title, required this.urls, required this.counter});
 
   factory _$_KnowledgeButton.fromJson(Map<String, dynamic> json) =>
       _$$_KnowledgeButtonFromJson(json);
 
   @override
   final String title;
-  final List<String> _urls;
   @override
-  List<String> get urls {
-    if (_urls is EqualUnmodifiableListView) return _urls;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_urls);
-  }
-
+  final List<String> urls;
   @override
-  final int counter;
+  int counter;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -157,21 +149,6 @@ class _$_KnowledgeButton
       ..add(DiagnosticsProperty('urls', urls))
       ..add(DiagnosticsProperty('counter', counter));
   }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_KnowledgeButton &&
-            (identical(other.title, title) || other.title == title) &&
-            const DeepCollectionEquality().equals(other._urls, _urls) &&
-            (identical(other.counter, counter) || other.counter == counter));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, title, const DeepCollectionEquality().hash(_urls), counter);
 
   @JsonKey(ignore: true)
   @override
@@ -191,7 +168,7 @@ abstract class _KnowledgeButton implements KnowledgeButton {
   const factory _KnowledgeButton(
       {required final String title,
       required final List<String> urls,
-      required final int counter}) = _$_KnowledgeButton;
+      required int counter}) = _$_KnowledgeButton;
 
   factory _KnowledgeButton.fromJson(Map<String, dynamic> json) =
       _$_KnowledgeButton.fromJson;
@@ -202,6 +179,7 @@ abstract class _KnowledgeButton implements KnowledgeButton {
   List<String> get urls;
   @override
   int get counter;
+  set counter(int value);
   @override
   @JsonKey(ignore: true)
   _$$_KnowledgeButtonCopyWith<_$_KnowledgeButton> get copyWith =>

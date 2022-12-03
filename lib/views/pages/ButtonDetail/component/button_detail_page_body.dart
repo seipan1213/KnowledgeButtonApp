@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:kome_app/models/knowledge_button.dart';
+import 'package:kome_app/viewModels/button_list_view_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ButtonDetailPageBody extends ConsumerWidget {
@@ -9,10 +10,10 @@ class ButtonDetailPageBody extends ConsumerWidget {
 
   final KnowledgeButton buttonData;
   Future<void> _launchUrl() async {
-    final Uri _url =
+    final Uri url =
         Uri.parse(buttonData.urls[Random().nextInt(buttonData.urls.length)]);
-    if (!await launchUrl(_url)) {
-      throw 'Could not launch $_url';
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
     }
   }
 
@@ -56,6 +57,7 @@ class ButtonDetailPageBody extends ConsumerWidget {
             ),
             onPressed: () {
               _launchUrl();
+              ref.watch(buttonListViewModelProvider).value!.first.counter++;
             },
           ),
         ),
