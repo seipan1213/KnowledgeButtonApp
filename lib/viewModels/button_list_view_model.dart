@@ -1,25 +1,25 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kome_app/models/knowledge_data.dart';
-import 'package:kome_app/repositories/knowledge_data_repository.dart';
+import 'package:kome_app/models/knowledge_button.dart';
+import 'package:kome_app/repositories/knowledge_button_repository.dart';
 
-final buttonListViewModelProvider =
-    StateNotifierProvider<ButtonListViewModel, AsyncValue<List<KnowledgeData>>>(
+final buttonListViewModelProvider = StateNotifierProvider<ButtonListViewModel,
+    AsyncValue<List<KnowledgeButton>>>(
   (ref) => ButtonListViewModel(
-    KnowledgeDataRepository(),
+    KnowledgeButtonRepository(),
   ),
 );
 
 class ButtonListViewModel
-    extends StateNotifier<AsyncValue<List<KnowledgeData>>> {
-  final KnowledgeDataRepository _knowledgeDataRepository;
-  ButtonListViewModel(this._knowledgeDataRepository)
-      : super(const AsyncLoading<List<KnowledgeData>>()) {
+    extends StateNotifier<AsyncValue<List<KnowledgeButton>>> {
+  final KnowledgeButtonRepository _knowledgeButtonRepository;
+  ButtonListViewModel(this._knowledgeButtonRepository)
+      : super(const AsyncLoading<List<KnowledgeButton>>()) {
     fetch();
   }
 
   Future<void> fetch() async {
     try {
-      final data = await _knowledgeDataRepository.fetch();
+      final data = await _knowledgeButtonRepository.fetch();
 
       state = AsyncData([...data]);
     } catch (error, stack) {
