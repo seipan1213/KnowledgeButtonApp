@@ -22,6 +22,7 @@ KnowledgeButton _$KnowledgeButtonFromJson(Map<String, dynamic> json) {
 mixin _$KnowledgeButton {
   String get title => throw _privateConstructorUsedError;
   List<String> get urls => throw _privateConstructorUsedError;
+  int get counter => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $KnowledgeButtonCopyWith<$Res> {
           KnowledgeButton value, $Res Function(KnowledgeButton) then) =
       _$KnowledgeButtonCopyWithImpl<$Res, KnowledgeButton>;
   @useResult
-  $Res call({String title, List<String> urls});
+  $Res call({String title, List<String> urls, int counter});
 }
 
 /// @nodoc
@@ -53,6 +54,7 @@ class _$KnowledgeButtonCopyWithImpl<$Res, $Val extends KnowledgeButton>
   $Res call({
     Object? title = null,
     Object? urls = null,
+    Object? counter = null,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -63,6 +65,10 @@ class _$KnowledgeButtonCopyWithImpl<$Res, $Val extends KnowledgeButton>
           ? _value.urls
           : urls // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      counter: null == counter
+          ? _value.counter
+          : counter // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -75,7 +81,7 @@ abstract class _$$_KnowledgeButtonCopyWith<$Res>
       __$$_KnowledgeButtonCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String title, List<String> urls});
+  $Res call({String title, List<String> urls, int counter});
 }
 
 /// @nodoc
@@ -91,6 +97,7 @@ class __$$_KnowledgeButtonCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
     Object? urls = null,
+    Object? counter = null,
   }) {
     return _then(_$_KnowledgeButton(
       title: null == title
@@ -101,6 +108,10 @@ class __$$_KnowledgeButtonCopyWithImpl<$Res>
           ? _value._urls
           : urls // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      counter: null == counter
+          ? _value.counter
+          : counter // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -111,7 +122,9 @@ class _$_KnowledgeButton
     with DiagnosticableTreeMixin
     implements _KnowledgeButton {
   const _$_KnowledgeButton(
-      {required this.title, required final List<String> urls})
+      {required this.title,
+      required final List<String> urls,
+      required this.counter})
       : _urls = urls;
 
   factory _$_KnowledgeButton.fromJson(Map<String, dynamic> json) =>
@@ -128,8 +141,11 @@ class _$_KnowledgeButton
   }
 
   @override
+  final int counter;
+
+  @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'KnowledgeButton(title: $title, urls: $urls)';
+    return 'KnowledgeButton(title: $title, urls: $urls, counter: $counter)';
   }
 
   @override
@@ -138,7 +154,8 @@ class _$_KnowledgeButton
     properties
       ..add(DiagnosticsProperty('type', 'KnowledgeButton'))
       ..add(DiagnosticsProperty('title', title))
-      ..add(DiagnosticsProperty('urls', urls));
+      ..add(DiagnosticsProperty('urls', urls))
+      ..add(DiagnosticsProperty('counter', counter));
   }
 
   @override
@@ -147,13 +164,14 @@ class _$_KnowledgeButton
         (other.runtimeType == runtimeType &&
             other is _$_KnowledgeButton &&
             (identical(other.title, title) || other.title == title) &&
-            const DeepCollectionEquality().equals(other._urls, _urls));
+            const DeepCollectionEquality().equals(other._urls, _urls) &&
+            (identical(other.counter, counter) || other.counter == counter));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, title, const DeepCollectionEquality().hash(_urls));
+      runtimeType, title, const DeepCollectionEquality().hash(_urls), counter);
 
   @JsonKey(ignore: true)
   @override
@@ -172,7 +190,8 @@ class _$_KnowledgeButton
 abstract class _KnowledgeButton implements KnowledgeButton {
   const factory _KnowledgeButton(
       {required final String title,
-      required final List<String> urls}) = _$_KnowledgeButton;
+      required final List<String> urls,
+      required final int counter}) = _$_KnowledgeButton;
 
   factory _KnowledgeButton.fromJson(Map<String, dynamic> json) =
       _$_KnowledgeButton.fromJson;
@@ -181,6 +200,8 @@ abstract class _KnowledgeButton implements KnowledgeButton {
   String get title;
   @override
   List<String> get urls;
+  @override
+  int get counter;
   @override
   @JsonKey(ignore: true)
   _$$_KnowledgeButtonCopyWith<_$_KnowledgeButton> get copyWith =>

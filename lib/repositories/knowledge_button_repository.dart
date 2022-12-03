@@ -11,15 +11,18 @@ class KnowledgeButtonRepository {
     final value = [
       {
         "title": "hoge1",
-        "urls": ["a1", "b1"]
+        "urls": ["a1", "b1"],
+        "counter": 0,
       },
       {
         "title": "hoge2",
-        "urls": ["a2", "b2"]
+        "urls": ["a2", "b2"],
+        "counter": 0,
       },
       {
         "title": "hoge3",
-        "urls": ["a3", "b3"]
+        "urls": ["a3", "b3"],
+        "counter": 0,
       }
     ];
     return value

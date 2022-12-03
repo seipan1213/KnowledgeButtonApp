@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
@@ -9,6 +11,7 @@ class KnowledgeButton with _$KnowledgeButton {
   const factory KnowledgeButton({
     required String title,
     required List<String> urls,
+    required int counter,
   }) = _KnowledgeButton;
 
   factory KnowledgeButton.fromJson(Map<String, dynamic> json) =>
