@@ -42,10 +42,10 @@ class ButtonDetailPageBody extends ConsumerWidget {
                 ),
               ),
             ),
-            child: SizedBox(
-              height: MediaQuery.of(context).size.width * 0.8,
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: const Center(
+            child: const SizedBox(
+              height: 350,
+              width: 350,
+              child: Center(
                 child: Image(
                   height: 300,
                   width: 300,

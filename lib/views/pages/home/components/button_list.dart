@@ -15,7 +15,7 @@ class ButtonList extends StatelessWidget {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
-          return ButtonItem(button: data[index]);
+          return ButtonItem(buttonData: data[index]);
         },
         childCount: data.length,
       ),

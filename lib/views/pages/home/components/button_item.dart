@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kome_app/models/knowledge_button.dart';
+import 'package:kome_app/views/pages/ButtonDetail/button_detail_page.dart';
 
 class ButtonItem extends StatelessWidget {
   const ButtonItem({
     super.key,
-    required this.button,
+    required this.buttonData,
   });
 
-  final KnowledgeButton button;
+  final KnowledgeButton buttonData;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Get.to(
+          ButtonDetailPage(buttonData: buttonData),
+          fullscreenDialog: true,
+        );
+      },
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
         decoration: BoxDecoration(
@@ -26,7 +33,7 @@ class ButtonItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(button.title),
+            Text(buttonData.title),
           ],
         ),
       ),
