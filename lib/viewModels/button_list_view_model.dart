@@ -11,11 +11,12 @@ final buttonListViewModelProvider = StateNotifierProvider<ButtonListViewModel,
 
 class ButtonListViewModel
     extends StateNotifier<AsyncValue<List<KnowledgeButton>>> {
-  final KnowledgeButtonRepository _knowledgeButtonRepository;
   ButtonListViewModel(this._knowledgeButtonRepository)
       : super(const AsyncLoading<List<KnowledgeButton>>()) {
     fetch();
   }
+
+  final KnowledgeButtonRepository _knowledgeButtonRepository;
 
   Future<void> fetch() async {
     try {

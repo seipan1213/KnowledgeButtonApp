@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
 part 'knowledge_button.freezed.dart';
+part 'knowledge_button.g.dart';
 
 @freezed
 class KnowledgeButton with _$KnowledgeButton {
@@ -9,4 +10,7 @@ class KnowledgeButton with _$KnowledgeButton {
     required String title,
     required List<String> urls,
   }) = _KnowledgeButton;
+
+  factory KnowledgeButton.fromJson(Map<String, dynamic> json) =>
+      _$KnowledgeButtonFromJson(json);
 }

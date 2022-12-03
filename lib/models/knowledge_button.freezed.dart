@@ -14,11 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+KnowledgeButton _$KnowledgeButtonFromJson(Map<String, dynamic> json) {
+  return _KnowledgeButton.fromJson(json);
+}
+
 /// @nodoc
 mixin _$KnowledgeButton {
   String get title => throw _privateConstructorUsedError;
   List<String> get urls => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $KnowledgeButtonCopyWith<KnowledgeButton> get copyWith =>
       throw _privateConstructorUsedError;
@@ -101,13 +106,16 @@ class __$$_KnowledgeButtonCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_KnowledgeButton
     with DiagnosticableTreeMixin
     implements _KnowledgeButton {
   const _$_KnowledgeButton(
       {required this.title, required final List<String> urls})
       : _urls = urls;
+
+  factory _$_KnowledgeButton.fromJson(Map<String, dynamic> json) =>
+      _$$_KnowledgeButtonFromJson(json);
 
   @override
   final String title;
@@ -142,6 +150,7 @@ class _$_KnowledgeButton
             const DeepCollectionEquality().equals(other._urls, _urls));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, title, const DeepCollectionEquality().hash(_urls));
@@ -151,12 +160,22 @@ class _$_KnowledgeButton
   @pragma('vm:prefer-inline')
   _$$_KnowledgeButtonCopyWith<_$_KnowledgeButton> get copyWith =>
       __$$_KnowledgeButtonCopyWithImpl<_$_KnowledgeButton>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_KnowledgeButtonToJson(
+      this,
+    );
+  }
 }
 
 abstract class _KnowledgeButton implements KnowledgeButton {
   const factory _KnowledgeButton(
       {required final String title,
       required final List<String> urls}) = _$_KnowledgeButton;
+
+  factory _KnowledgeButton.fromJson(Map<String, dynamic> json) =
+      _$_KnowledgeButton.fromJson;
 
   @override
   String get title;
