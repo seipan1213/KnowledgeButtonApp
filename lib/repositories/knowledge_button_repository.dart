@@ -1,4 +1,5 @@
 import 'package:kome_app/models/knowledge_button.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class KnowledgeButtonRepository {
   // final _knowledgeButtonApiClient;
@@ -40,6 +41,12 @@ class KnowledgeButtonRepository {
 
   Future<void> addButtonData(String title, List<String> urls) async {
     await Future.delayed(const Duration(milliseconds: 100));
+    for (final url in urls) {
+      if (url.isEmpty || !await canLaunchUrlString(url)) {
+        throw "can't open urls";
+      }
+    }
+
     buttonDatas.add({"title": title, "urls": urls, "counter": 0});
   }
 }
