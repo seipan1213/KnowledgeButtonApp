@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kome_app/models/knowledge_button.dart';
-import 'package:kome_app/views/pages/ButtonDetail/button_detail_page.dart';
+import 'package:kome_app/views/pages/buttonDetail/button_detail_page.dart';
 
 class ButtonItem extends StatelessWidget {
   const ButtonItem({

@@ -27,4 +27,9 @@ class ButtonListViewModel
       state = AsyncError(error, stack);
     }
   }
+
+  Future<void> addButtonData(String title, List<String> urls) async {
+    await _knowledgeButtonRepository.addButtonData(title, urls);
+    fetch();
+  }
 }
