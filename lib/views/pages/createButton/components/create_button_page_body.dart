@@ -8,7 +8,7 @@ class CreateButtonPageBody extends ConsumerWidget {
   CreateButtonPageBody({super.key});
 
   String title = "";
-  List<String> urls = List.filled(5, "");
+  final List<String> urls = List.filled(3, "");
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

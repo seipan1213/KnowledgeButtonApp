@@ -11,7 +11,6 @@ class KnowledgeButtonRepository {
   Future<dynamic> fetch() async {
     final json = await apiService.getKnowledgeButtons();
     return json.map((e) => KnowledgeButton.fromJson(e)).toList();
-    ;
   }
 
   Future<void> addButtonData(String title, List<String> urls) async {
