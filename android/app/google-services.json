@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "558779209147",
+    "project_id": "knowledge-button-app",
+    "storage_bucket": "knowledge-button-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558779209147:android:6f4d37ab07c0f83418a09e",
+        "android_client_info": {
+          "package_name": "com.example.knowledge_button_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558779209147-pbus35364qi9mh9lk3thcrpsjb0u0cin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKn9Nbrs6E4zXE369ZqoFc0ofToJpWD9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558779209147-pbus35364qi9mh9lk3thcrpsjb0u0cin.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "558779209147-tidps3hv3p793k7pqe33bk1agcc8p6jn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.komeApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558779209147:android:fc8ffde0f221055718a09e",
+        "android_client_info": {
+          "package_name": "com.example.kome_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558779209147-pbus35364qi9mh9lk3thcrpsjb0u0cin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKn9Nbrs6E4zXE369ZqoFc0ofToJpWD9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558779209147-pbus35364qi9mh9lk3thcrpsjb0u0cin.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "558779209147-tidps3hv3p793k7pqe33bk1agcc8p6jn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.komeApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
