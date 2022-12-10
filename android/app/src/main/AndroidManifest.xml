@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kome_app">
+    package="com.example.knowledge_button_app">
    <application
-        android:label="kome_app"
+        android:label="knowledge_button_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

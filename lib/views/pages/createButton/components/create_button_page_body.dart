@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kome_app/viewModels/button_list_view_model.dart';
+import 'package:knowledge_button_app/viewModels/button_list_view_model.dart';
 
 // ignore: must_be_immutable
 class CreateButtonPageBody extends ConsumerWidget {

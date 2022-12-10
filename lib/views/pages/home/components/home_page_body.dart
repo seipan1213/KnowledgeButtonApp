@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kome_app/models/knowledge_button.dart';
-import 'package:kome_app/viewModels/button_list_view_model.dart';
-import 'package:kome_app/views/pages/home/components/button_list.dart';
+import 'package:knowledge_button_app/models/knowledge_button.dart';
+import 'package:knowledge_button_app/viewModels/button_list_view_model.dart';
+import 'package:knowledge_button_app/views/pages/home/components/button_list.dart';
 
 class HomePageBody extends ConsumerWidget {
   const HomePageBody({super.key});

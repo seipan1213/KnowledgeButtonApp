@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kome_app/models/knowledge_button.dart';
-import 'package:kome_app/viewModels/button_list_view_model.dart';
+import 'package:knowledge_button_app/models/knowledge_button.dart';
+import 'package:knowledge_button_app/viewModels/button_list_view_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ButtonDetailPageBody extends ConsumerWidget {

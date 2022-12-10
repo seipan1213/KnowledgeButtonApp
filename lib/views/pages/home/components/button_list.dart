@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kome_app/models/knowledge_button.dart';
-import 'package:kome_app/views/pages/home/components/button_item.dart';
+import 'package:knowledge_button_app/models/knowledge_button.dart';
+import 'package:knowledge_button_app/views/pages/home/components/button_item.dart';
 
 class ButtonList extends StatelessWidget {
   const ButtonList({

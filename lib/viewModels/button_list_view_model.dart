@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kome_app/models/knowledge_button.dart';
-import 'package:kome_app/repositories/knowledge_button_repository.dart';
+import 'package:knowledge_button_app/models/knowledge_button.dart';
+import 'package:knowledge_button_app/repositories/knowledge_button_repository.dart';
 
 final buttonListViewModelProvider = StateNotifierProvider<ButtonListViewModel,
     AsyncValue<List<KnowledgeButton>>>(

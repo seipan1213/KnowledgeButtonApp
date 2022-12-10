@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kome_app/models/knowledge_button.dart';
+import 'package:knowledge_button_app/models/knowledge_button.dart';
 
 class ButtonDetailPageAppBar extends StatelessWidget
     implements PreferredSizeWidget {
