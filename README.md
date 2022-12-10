@@ -1,4 +1,4 @@
-# kome_app
+# knowledge_button_app
 
 A new Flutter project.
 

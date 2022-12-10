@@ -1,4 +1,4 @@
-package com.example.kome_app
+package com.example.knowledge_button_app
 
 import io.flutter.embedding.android.FlutterActivity
 

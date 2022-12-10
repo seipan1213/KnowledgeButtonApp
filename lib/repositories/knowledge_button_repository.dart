@@ -1,4 +1,4 @@
-import 'package:kome_app/models/knowledge_button.dart';
+import 'package:knowledge_button_app/models/knowledge_button.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class KnowledgeButtonRepository {
