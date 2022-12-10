@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kome_app/api/api_service.dart';
 import 'package:kome_app/viewModels/button_list_view_model.dart';
 
 // ignore: must_be_immutable
@@ -72,8 +71,6 @@ class CreateButtonPageBody extends ConsumerWidget {
               ),
             ),
             onPressed: () async {
-              var data = await apiService.getKnowledgeButtons();
-              return;
               ref
                   .read(buttonListViewModelProvider.notifier)
                   .addButtonData(title, urls)
