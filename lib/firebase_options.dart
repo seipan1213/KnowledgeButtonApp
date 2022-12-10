@@ -70,7 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '558779209147',
     projectId: 'knowledge-button-app',
     storageBucket: 'knowledge-button-app.appspot.com',
-    iosClientId: '558779209147-tidps3hv3p793k7pqe33bk1agcc8p6jn.apps.googleusercontent.com',
-    iosBundleId: 'com.example.komeApp',
+    iosClientId:
+        '558779209147-tidps3hv3p793k7pqe33bk1agcc8p6jn.apps.googleusercontent.com',
+    iosBundleId: 'com.example.knowledgeButtonApp',
   );
 }
