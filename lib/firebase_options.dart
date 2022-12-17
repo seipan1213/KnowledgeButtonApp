@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -43,8 +44,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAe-gl5t9CxlINVzbbcLGf2raBblHKfxjQ',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.get('WEB_API_KEY'),
     appId: '1:558779209147:web:cba10b4163aca59618a09e',
     messagingSenderId: '558779209147',
     projectId: 'knowledge-button-app',
@@ -53,16 +54,16 @@ class DefaultFirebaseOptions {
     measurementId: 'G-M023N535NS',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBKn9Nbrs6E4zXE369ZqoFc0ofToJpWD9c',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.get('ANDROID_API_KEY'),
     appId: '1:558779209147:android:6f4d37ab07c0f83418a09e',
     messagingSenderId: '558779209147',
     projectId: 'knowledge-button-app',
     storageBucket: 'knowledge-button-app.appspot.com',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAVGb89aTcGvNJQdZoRBRvLcVneKnXxN7s',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.get('IOS_API_KEY'),
     appId: '1:558779209147:ios:6611ddf264c8b22418a09e',
     messagingSenderId: '558779209147',
     projectId: 'knowledge-button-app',
@@ -72,8 +73,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.knowledgeButtonApp',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAVGb89aTcGvNJQdZoRBRvLcVneKnXxN7s',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.get('MACOS_API_KEY'),
     appId: '1:558779209147:ios:6611ddf264c8b22418a09e',
     messagingSenderId: '558779209147',
     projectId: 'knowledge-button-app',
